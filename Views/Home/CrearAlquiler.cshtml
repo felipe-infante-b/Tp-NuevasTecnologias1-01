@@ -1,0 +1,25 @@
+﻿@model Alquiler
+
+@{
+    ViewData["Title"] = "Crear Alquiler";
+}
+
+<h1>Crear Alquiler</h1>
+
+<form asp-action="CrearAlquiler">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="LibroId" class="control-label">Libro</label>
+        <select asp-for="LibroId" class="form-control" asp-items="ViewBag.Libros"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClienteId" class="control-label">Cliente</label>
+        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.Clientes"></select>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <input type="submit" value="Crear" class="btn btn-primary" />
+    </div>
+</form>

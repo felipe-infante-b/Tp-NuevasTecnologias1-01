@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Libro>
+
+@{
+    ViewData["Title"] = "Libros";
+}
+
+<h1>Bienvenido</h1>
+
+<p>
+    <a asp-action="CrearLibro" class="btn btn-default">Crear Libro</a>
+    <a asp-action="CrearCliente" class="btn btn-default">Crear Cliente</a>
+    <a asp-action="CrearAlquiler" class="btn btn-primary">Alquilar</a>
+    <a asp-action="CrearDevolucion" class="btn btn-secondary">Devolver</a>
+</p>

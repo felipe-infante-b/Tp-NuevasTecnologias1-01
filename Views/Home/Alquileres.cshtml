@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Alquiler>
+
+@{
+    ViewData["Title"] = "Alquileres";
+}
+
+<h1>Movimientos</h1>
+
+<p>
+    <a asp-action="CrearLibro" class="btn btn-default">Crear Libro</a>
+    <a asp-action="CrearCliente" class="btn btn-default">Crear Cliente</a>
+    <a asp-action="CrearAlquiler" class="btn btn-primary">Alquilar</a>
+    <a asp-action="CrearDevolucion" class="btn btn-secondary">Devolver</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id Movimiento</th>
+            <th>Tipo</th>
+            <th>Id Libro</th>
+            <th>Id Cliente</th>          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Devuelto</td>
+                <td>@item.LibroId</td>
+                <td>@item.ClienteId</td>               
+            </tr>
+        }
+    </tbody>
+</table>
